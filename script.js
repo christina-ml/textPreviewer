@@ -188,7 +188,6 @@ for (let font of fonts) {
 fontSelection.addEventListener("change", (e)=>{
     // console.log("trigger", e.target.value);
     previewPlaceholder.style.fontFamily = e.target.value;
-    // console.log(previewPlaceholder.style.fontFamily)
 })
 
 
@@ -206,7 +205,6 @@ for (let color of colors) {
 colorSelection.addEventListener("change", (e)=>{
     // console.log("trigger", e.target.value);
     previewPlaceholder.style.color = e.target.value;
-    // console.log(previewPlaceholder.style.color)
 })
 
 /* Add an Event Listener to the `textarea` box */
@@ -218,10 +216,33 @@ textInput.addEventListener("input", (e)=>{
 })
 
 
+/*
+SELECT SAVE BUTTON
+Grab multiple elements from this page, and then do something
+*/
+let button = document.querySelector("#save-button");
+button.addEventListener("click", ()=>{
+    /* Console.log the 3 values we want. Use `.value` to have access to them */
+    console.log(textInput.value, fontSelection.value, colorSelection.value);
+    /* Select our `list` ul. Create a list item element */
+    let list = document.querySelector("#saved-list ul");
+    let li = document.createElement("li");
+
+    /* Using `textContent` on the list item bc its informational */
+    li.textContent = textInput.value; // add text content
+    li.style.fontFamily = fontSelection.value; // change styling - font
+    li.style.color = colorSelection.value; // change styling - color
+    // <li>
+    //     BlahBlahBlah
+    // </li>
+    /* Append it to our page */
+    list.append(li);
+})
 
 
-let saveButton = document.querySelector("#save-button");
-let savedList = document.querySelector("#saved-list");
+
+
+
 
 
 
@@ -234,11 +255,12 @@ let savedList = document.querySelector("#saved-list");
 
 
 /*
+Select these values
+create a list item
+Save these values
+ */
 
-Kiyomi:
-loading font & color
-
-
+/*
 while typing in `#text-input` value needs to be in preview
 Add text to preview
 Add font to preview - selecting font - array of fonts
