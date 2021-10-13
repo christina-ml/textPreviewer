@@ -223,7 +223,7 @@ Grab multiple elements from this page, and then do something
 let button = document.querySelector("#save-button");
 button.addEventListener("click", ()=>{
     /* Console.log the 3 values we want. Use `.value` to have access to them */
-    console.log(textInput.value, fontSelection.value, colorSelection.value);
+    // console.log(textInput.value, fontSelection.value, colorSelection.value);
     /* Select our `list` ul. Create a list item element */
     let list = document.querySelector("#saved-list ul");
     let li = document.createElement("li");
@@ -266,38 +266,3 @@ fetch("https://swapi.dev/api/people/")
     .catch((err)=>{
         console.log(err);
     })
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-Select these values
-create a list item
-Save these values
- */
-
-/*
-while typing in `#text-input` value needs to be in preview
-Add text to preview
-Add font to preview - selecting font - array of fonts
-Add color to preview - selecting color - array of colors
-`#save-button` - add event listener
-add text from preview to `#saved-list`
-*/
-
-/* christina found this:
-https://www.thecolorapi.com/id?hex=24B1E0
-*/
-
-/*
-Greg didn't use in class:
-http://hp-api.herokuapp.com/api/characters - harry potter
-*/
