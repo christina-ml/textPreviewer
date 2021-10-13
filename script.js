@@ -243,7 +243,6 @@ button.addEventListener("click", ()=>{
 /* //////////// STAR WARS CODE //////////// */
 /*
 Fetch this data:
-http://hp-api.herokuapp.com/api/characters - harry potter
 https://swapi.dev/api/people/ - star wars
 OR...insert any API you want to look at.
 
@@ -263,7 +262,6 @@ fetch("https://swapi.dev/api/people/")
             /* Appending children to this div for every character in the `data` object */
             starWars.append(div);
         }
-
     })
     .catch((err)=>{
         console.log(err);
@@ -297,4 +295,9 @@ add text from preview to `#saved-list`
 
 /* christina found this:
 https://www.thecolorapi.com/id?hex=24B1E0
+*/
+
+/*
+Greg didn't use in class:
+http://hp-api.herokuapp.com/api/characters - harry potter
 */
