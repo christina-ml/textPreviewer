@@ -253,11 +253,17 @@ let starWars = document.querySelector("#star-wars");
 fetch("https://swapi.dev/api/people/")
     .then((res)=> res.json())
     .then((data)=>{
-        console.log(data.results);
+        // console.log(data.results);
+        let characterList = data.results;
 
+        /* iterate through `characterList` */
+        for (let character of characterList){
+            let div = document.createElement("div");
+            div.textContent = character.name;
+            /* Appending children to this div for every character in the `data` object */
+            starWars.append(div);
+        }
 
-        /* Start appending children to this div */
-        starWars.append();
     })
     .catch((err)=>{
         console.log(err);
