@@ -237,11 +237,31 @@ button.addEventListener("click", ()=>{
     // </li>
     /* Append it to our page */
     list.append(li);
-})
+});
 
 
+/* //////////// STAR WARS CODE //////////// */
+/*
+Fetch this data:
+http://hp-api.herokuapp.com/api/characters - harry potter
+https://swapi.dev/api/people/ - star wars
+OR...insert any API you want to look at.
+
+Going to make a div for every one of these characters.
+*/
+let starWars = document.querySelector("#star-wars");
+fetch("https://swapi.dev/api/people/")
+    .then((res)=> res.json())
+    .then((data)=>{
+        console.log(data.results);
 
 
+        /* Start appending children to this div */
+        starWars.append();
+    })
+    .catch((err)=>{
+        console.log(err);
+    })
 
 
 
